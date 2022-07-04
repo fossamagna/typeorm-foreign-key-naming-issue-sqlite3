@@ -1,0 +1,25 @@
+{
+  "name": "typeorm-foreign-key-naming-issue",
+  "version": "0.0.1",
+  "description": "Sample repository to reproduce typeorm foreign key naming issue.",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^16.11.10",
+    "ts-node": "10.7.0",
+    "typescript": "4.5.2"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.0.8",
+    "typeorm": "0.3.7"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "migration:run": "npm run typeorm -- -d ./src/data-source.ts migration:run",
+    "migration:revert": "npm run typeorm -- -d ./src/data-source.ts migration:revert",
+    "migration:create": "npm run typeorm -- migration:create",
+    "migration:check": "npm run typeorm -- -d ./src/data-source.ts migration:generate --check dummy",
+    "schema:sync": "npm run typeorm -- -d ./src/data-source.ts schema:sync"
+  }
+}
