@@ -1,5 +1,5 @@
 {
-  "name": "typeorm-foreign-key-naming-issue",
+  "name": "typeorm-foreign-key-naming-issue-sqlite3",
   "version": "0.0.1",
   "description": "Sample repository to reproduce typeorm foreign key naming issue.",
   "type": "commonjs",
